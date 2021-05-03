@@ -12,21 +12,20 @@
 		<?php
 
 		    @$get_data=file_get_contents('https://covid19.th-stat.com/api/open/today');
-			$covid19_th=json_decode($get_data);
-
-			//ประกาศตัวแปรแยกเป็นแต่ละคอลัมภ์ เพื่อเอาไปใช้งาน/ตกแต่งให้สวยงามตามใจคุณ ^^
-			$Confirmed=$covid19_th->Confirmed;
-			$Recovered=$covid19_th->Recovered;
-			$Hospitalized=$covid19_th->Hospitalized;
-			$NewConfirmed=$covid19_th->NewConfirmed;
-			$NewRecovered =$covid19_th->NewRecovered;
-			$NewHospitalized =$covid19_th->NewHospitalized;
-			$NewDeaths =$covid19_th->NewDeaths;
-			$UpdateDate=$covid19_th->UpdateDate;
-			$Deaths=$covid19_th->Deaths;
+			$covid19=json_decode($get_data);
+            
+			$Confirmed=$covid19->Confirmed;
+			$Recovered=$covid19->Recovered;
+			$Hospitalized=$covid19->Hospitalized;
+			$NewConfirmed=$covid19->NewConfirmed;
+			$NewRecovered =$covid19->NewRecovered;
+			$NewHospitalized =$covid19->NewHospitalized;
+			$NewDeaths =$covid19->NewDeaths;
+			$UpdateDate=$covid19->UpdateDate;
+			$Deaths=$covid19->Deaths;
 		?>
 
-		<!-- ส่วนนี้ก็ตกแต่งง่ายๆด้วย Bootstrap4 -->
+		<!--Bootstrap4 -->
 		<div class="container">
 			<div class="row">
 				<div class="col col-sm-12">
